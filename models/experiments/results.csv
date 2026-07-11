@@ -1,0 +1,8 @@
+experiment_id,model_name,architecture,test_images,test_accuracy,status
+01,cnn_baseline,custom_cnn,1595,85.71,experiment
+02,cnn_v4,custom_cnn,1595,90.91,experiment
+03,cnn_v5,custom_cnn,1595,81.63,experiment
+04,resnet50_phase1,resnet50,1595,90.72,experiment
+05,resnet50_v6,resnet50,1595,93.98,experiment
+06,xception_v7,xception,1595,88.59,experiment
+07,resnet50_phase2_final,resnet50,1595,94.80,selected_final_model

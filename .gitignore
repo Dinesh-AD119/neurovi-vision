@@ -1,0 +1,55 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python compiled / cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node dependencies and builds
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+.tanstack/
+
+# ML models (except tracked documentation)
+*.keras
+*.h5
+*.hdf5
+!models/final/README.md
+!models/experiments/README.md
+!models/experiments/results.csv
+
+# Large Datasets
+dataset/
+
+# Local database records & misclassifications
+backend/data/records.json
+backend/data/misclassifications.json
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+gradcam_outputs/
+uploads/
+outputs/FINAL_REPOSITORY_AUDIT.md
+FINAL_REPOSITORY_AUDIT.md
