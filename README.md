@@ -50,6 +50,31 @@ graph TD
 
 ---
 
+### Evaluation Dataset
+
+The final NeuroVi Vision model was evaluated on an exact 1,595-image subset derived from the Brain Tumor MRI Dataset by Masoud Nickparvar.
+
+- **Evaluation subset:** 1,595 MRI images
+- **Glioma:** 395 images
+- **Meningioma:** 400 images
+- **No Tumor:** 400 images
+- **Pituitary:** 400 images
+- **Reported accuracy on this subset:** 94.80%
+- **License:** CC BY 4.0
+
+The exact evaluation subset used for reproducibility is publicly available on Kaggle:
+
+- **NeuroVi Vision MRI Evaluation Test Subset:** https://www.kaggle.com/datasets/adk119/neurovi-vision-evaluated-test-subset
+- **Original dataset source:** https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+
+Compared with the 1,600-image Testing split obtained from the original dataset, the local evaluation subset used by NeuroVi Vision does not contain five glioma files:
+
+`Te-gl_1.jpg`, `Te-gl_10.jpg`, `Te-gl_100.jpg`, `Te-gl_101.jpg`, and `Te-gl_102.jpg`.
+
+The reason these files were absent from the local evaluation copy is unknown. No claim is made that their absence was intentional.
+
+---
+
 ## Repository vs Release Assets
 Due to the large size of trained deep learning models, Keras model files (`*.keras`) are intentionally excluded from Git tracking. They are instead hosted as release assets on GitHub:
 
@@ -135,7 +160,9 @@ pip install -r requirements.txt
 # Run backend test suite
 pytest backend/tests -v
 
-# Run full evaluation script to verify 94.80% accuracy
+# Optional: reproduce the reported evaluation result.
+# First download the published evaluation subset from Kaggle
+# and place the Testing directory at dataset/Testing.
 python full_evaluation.py
 
 # Start the FastAPI backend server
@@ -157,4 +184,5 @@ npm run dev
 ---
 
 ## License & Usage Disclaimer
-Please refer to [docs/MODEL_CARD.md](file:///D:/Brain_Tumor_Classifier/docs/MODEL_CARD.md) and [docs/ARCHITECTURE.md](file:///D:/Brain_Tumor_Classifier/docs/ARCHITECTURE.md) for full system specifications and ethical considerations.
+
+Please refer to [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), and [`docs/EVALUATION.md`](docs/EVALUATION.md) for model details, system architecture, evaluation methodology, limitations, and ethical considerations.
