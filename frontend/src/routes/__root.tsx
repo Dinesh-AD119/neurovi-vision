@@ -188,10 +188,16 @@ function SiteHeader() {
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 backdrop-blur-md bg-background/75">
       <div className="mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="relative h-8 w-8 rounded-full bg-gradient-warm shadow-glow animate-pulse-glow" />
-            <span className="font-display text-xl tracking-tight">NeuroVision <span className="text-primary">AI</span></span>
-          </Link>
+           <Link to="/" className="flex items-center gap-2.5 group">
+               <img
+                   src="/neurovision-logo.png"
+                   alt="NeuroVision AI logo"
+                   className="h-10 w-10 rounded-full object-cover"
+                  />
+                   <span className="font-display text-xl tracking-tight">
+                   NeuroVision <span className="text-primary">AI</span>
+           </span>
+</Link>
           
           <button
             onClick={toggleMode}
